@@ -1,0 +1,75 @@
+@import '../../variable.css';
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .logoImg {
+    width: 8.3rem;
+    height: 1.2rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.95rem;
+  }
+}
+
+.infoText {
+  text-align: center;
+  margin-bottom: 2rem;
+  h1 {
+    font-size: 1.5rem;
+    line-height: 110%;
+    color: var(--neutral-0);
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 120%;
+    letter-spacing: -0.5px;
+    color: var(--neutral-300);
+  }
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+    color: var(--neutral-0);
+    width: 100%;
+  }
+  .inputField {
+    width: 100%;
+    height: 2.7rem;
+    border: solid 2px var(--neutral-500);
+    border-radius: 0.6rem;
+    background-color: hsla(0, 0%, 100%, 8%);
+    padding: 0 0.6rem;
+  }
+  .generateBtn {
+    width: 100%;
+    height: 2.7rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.6rem;
+    border: none;
+    background-color: var(--orange-500);
+    font-family: inherit;
+    color: var(--neutral-900);
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+    font-weight: 800;
+  }
+}
+.fileInputContainer {
+  width: 100%;
+  height: 6.3rem;
+  padding: 0.6rem 0.8rem;
+  border: dashed 2px var(--neutral-500);
+  border-radius: 0.6rem;
+  background-color: hsla(0, 0%, 100%, 8%);
+}

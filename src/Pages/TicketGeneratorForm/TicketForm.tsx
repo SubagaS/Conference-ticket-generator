@@ -35,8 +35,6 @@ function TicketForm() {
       resetFile();
       return false;
     }
-
-    console.log('File is valid');
     setError('');
     return true;
   };
@@ -73,19 +71,24 @@ function TicketForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    let formContainsError = false;
 
     if (!file) {
       setError('Please select a valid file before submitting.');
+      formContainsError = true;
     }
-    if (fullName === '') {
-      setFullNameError('Please enter this field ');
+    if (fullName.length === 0) {
+      setFullNameError('Please enter this field.');
+      formContainsError = true;
     }
 
     if (!email.includes('@') || !email.includes('.') || email === '') {
       setEmailError('Please enter a valid email.');
+      formContainsError = true;
     }
     if (github === '') {
       setGithubError('GitHub username cannot be empty.');
+      formContainsError = true;
     }
 
     try {
@@ -101,11 +104,14 @@ function TicketForm() {
       }
     } catch (err) {
       setGithubError('Network error while checking GitHub.');
+      formContainsError = true;
     }
-    console.log('File submitted');
-    navigate('/ticketGenerated', {
-      state: { fullName, email, github, preview },
-    });
+
+    if (!formContainsError) {
+      navigate('/ticketGenerated', {
+        state: { fullName, email, github, preview },
+      });
+    }
   };
 
   const resetFile = () => {

@@ -26,26 +26,47 @@ function TicketGenerated() {
           className={styles.logoImg}
         />
       </header>
-      <div className={styles.formTextInfo}>
-        <h1>Congrats, {data.fullName}! Your ticket is ready.</h1>
+      <div className={styles.formEmailInfo}>
+        <h1>
+          Congrats, <span className={styles.fullNameSpan}>{data.fullName}</span>
+          ! Your ticket is ready.
+        </h1>
         <p>
-          We've emailed your ticket to {data.email} and will send updates in the
+          We've emailed your ticket to <span className={styles.emailID}>{data.email}</span> and will send updates in the
           run up to the event.
         </p>
       </div>
-      <div>
-        <img
-          src="../../../public/assets/images/logo-mark.svg"
-          alt="logo-mark"
-        />
-        <div>
-          <h2>Coding Conf</h2>
+      <div className={styles.ticketBgContainer}>
+        <p className={styles.ticketId}>#01609</p>
+        <div className={styles.datePlaceContainer}>
+          <img
+            src="../../../public/assets/images/logo-mark.svg"
+            alt="logo-mark"
+            className={styles.logoMark}
+          />
+          <div className={styles.datePlace}>
+            <h2>Coding Conf</h2>
+            <p>Jan 31, 2025 / Austin, TX</p>
+          </div>
+        </div>
+        <div className={styles.formDetails}>
+          <img
+            src={data.preview}
+            alt="avatar-img"
+            className={styles.formAvatar}
+          />
+          <div className={styles.formDetailsText}>
+            <h2>{data.fullName}</h2>
+            <div className={styles.githubDetails}>
+              <img
+                src="../../../public/assets/images/icon-github.svg"
+                alt="github-icon"
+              />
+              <p>{data.github}</p>
+            </div>
+          </div>
         </div>
       </div>
-      <img
-        src="../../../public/assets/images/pattern-ticket.svg"
-        alt="ticket"
-      />
     </>
   );
 }

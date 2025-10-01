@@ -43,6 +43,32 @@
     color: var(--neutral-0);
     width: 100%;
   }
+  .inputFile {
+    display: none;
+  }
+  .uploadBtn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.6rem;
+    background-color: hsla(0, 0%, 100%, 10%);
+    border: solid 1px var(--neutral-700);
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  .uploadPhotoMsg {
+    font-size: 0.6rem;
+    line-height: 120%;
+    letter-spacing: -0.2px;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    .infoIcon {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
   .inputField {
     width: 100%;
     height: 2.7rem;
@@ -50,6 +76,10 @@
     border-radius: 0.6rem;
     background-color: hsla(0, 0%, 100%, 8%);
     padding: 0 0.6rem;
+    color: white;
+  }
+  .submitBtnLink {
+    width: 100%;
   }
   .generateBtn {
     width: 100%;
@@ -64,12 +94,77 @@
     letter-spacing: -0.3px;
     font-weight: 800;
   }
+  .fileUploadImgInputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 120%;
+    width: 100%;
+    height: 6.3rem;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 0;
+    border: dashed 2px var(--neutral-500);
+    border-radius: 0.6rem;
+    background-color: hsla(0, 0%, 100%, 8%);
+  }
+  .fileInputContainer {
+    width: 100%;
+    height: 6.3rem;
+    padding: 0.6rem 0.8rem;
+    border: dashed 2px var(--neutral-500);
+    border-radius: 0.6rem;
+    background-color: hsla(0, 0%, 100%, 8%);
+  }
+  .errorMessage {
+    color: red;
+    font-size: 0.8rem;
+  }
 }
-.fileInputContainer {
-  width: 100%;
-  height: 6.3rem;
-  padding: 0.6rem 0.8rem;
-  border: dashed 2px var(--neutral-500);
-  border-radius: 0.6rem;
-  background-color: hsla(0, 0%, 100%, 8%);
+
+@media screen and (min-width: 37.5rem) {
+  .headerContainer {
+    .logoImg {
+      width: 10.4rem;
+      height: 1.5rem;
+    }
+  }
+  .infoText {
+    width: 35.25rem;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  .formContainer {
+    min-width: 26.1rem;
+  }
+}
+
+@media screen and (min-width: 72rem) {
+  .headerContainer {
+    .logoImg {
+      width: 10.4rem;
+      height: 1.5rem;
+    }
+  }
+  .infoText {
+    width: 44.5rem;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  .formContainer {
+    min-width: 23rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

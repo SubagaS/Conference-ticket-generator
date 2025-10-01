@@ -18,8 +18,9 @@ body,
 #root {
   font-family: 'Inconsolata';
   font-size: 20px;
-  width: 100%;
+  min-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 #root {
   padding: 0.8rem 0.8rem 0 0.8rem;
@@ -38,7 +39,42 @@ body {
   padding-bottom: 2rem;
   font-size: 0.89rem;
   color: var(--neutral-0);
+  text-align: center;
   a {
     color: var(--neutral-0);
+  }
+}
+
+@media screen and (min-width: 37.5rem) {
+  body {
+    background-image: url('../public//assets/images/background-tablet.png');
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 72rem) {
+  body {
+    background-image: url('../public//assets/images/background-desktop.png');
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

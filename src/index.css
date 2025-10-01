@@ -32,6 +32,7 @@ body,
 body {
   background-image: url('../public/assets/images/background-mobile.png');
   background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -70,6 +71,7 @@ body {
   body {
     background-image: url('../public//assets/images/background-desktop.png');
     background-repeat: no-repeat;
+
     position: relative;
     display: flex;
     flex-direction: column;

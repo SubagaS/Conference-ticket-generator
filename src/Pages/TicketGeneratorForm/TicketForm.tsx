@@ -218,6 +218,8 @@ function TicketForm() {
           Full Name
           <input
             type="text"
+            placeholder="Fullname"
+
             className={styles.inputField}
             value={fullName}
             onChange={handleFullName}
@@ -243,7 +245,7 @@ function TicketForm() {
           GitHub Username
           <input
             type="text"
-            placeholder="@yourusername"
+            placeholder="Username"
             className={styles.inputField}
             onChange={handleGithubUser}
           />

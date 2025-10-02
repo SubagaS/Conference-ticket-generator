@@ -143,7 +143,7 @@ function TicketForm() {
     <>
       <header className={styles.headerContainer}>
         <img
-          src="../../../public/assets/images/logo-full.svg"
+          src={`${import.meta.env.BASE_URL}/assets/images/logo-full.svg`}
           alt="logo"
           className={styles.logoImg}
         />
@@ -180,7 +180,9 @@ function TicketForm() {
                 }}
               >
                 <img
-                  src="../../../public/assets/images/icon-upload.svg"
+                  src={`${
+                    import.meta.env.BASE_URL
+                  }/assets/images/icon-upload.svg`}
                   alt="upload-icon"
                 />
               </button>
@@ -206,7 +208,7 @@ function TicketForm() {
           {error && <p className={styles.errorMessage}>{error}</p>}
           <p className={styles.uploadPhotoMsg}>
             <img
-              src="../../../public/assets/images/icon-info.svg"
+              src={`${import.meta.env.BASE_URL}/assets/images/icon-info.svg`}
               alt="info-icon"
               className={styles.infoIcon}
             />
@@ -219,7 +221,6 @@ function TicketForm() {
           <input
             type="text"
             placeholder="Fullname"
-
             className={styles.inputField}
             value={fullName}
             onChange={handleFullName}

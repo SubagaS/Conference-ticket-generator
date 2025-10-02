@@ -1,15 +1,17 @@
 import TicketForm from './Pages/TicketGeneratorForm/TicketForm';
 import TicketGenerated from './Pages/TicketGenerated/TicketGenerated';
 import Backgroundpattern from './Components/Background-patterns/BackgroundPattern';
-import { Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<TicketForm />} />
-        <Route path="/ticketGenerated" element={<TicketGenerated />} />
-      </Routes>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<TicketForm />} />
+          <Route path="/ticketGenerated" element={<TicketGenerated />} />
+        </Routes>
+      </HashRouter>
 
       <Backgroundpattern />
       <div className="attribution">

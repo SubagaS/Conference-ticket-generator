@@ -21,7 +21,7 @@ function TicketGenerated() {
     <>
       <header className={styles.headerContainer}>
         <img
-          src="../../../public/assets/images/logo-full.svg"
+          src={`${import.meta.env.BASE_URL}/assets/images/logo-full.svg`}
           alt="logo"
           className={styles.logoImg}
         />
@@ -40,7 +40,7 @@ function TicketGenerated() {
         <p className={styles.ticketId}>#01609</p>
         <div className={styles.datePlaceContainer}>
           <img
-            src="../../../public/assets/images/logo-mark.svg"
+            src={`${import.meta.env.BASE_URL}/assets/images/logo-mark.svg`}
             alt="logo-mark"
             className={styles.logoMark}
           />
@@ -59,7 +59,7 @@ function TicketGenerated() {
             <h2>{data.fullName}</h2>
             <div className={styles.githubDetails}>
               <img
-                src="../../../public/assets/images/icon-github.svg"
+                src={`${import.meta.env.BASE_URL}/assets/images/icon-github.svg`}
                 alt="github-icon"
               />
               <p>{data.github}</p>
